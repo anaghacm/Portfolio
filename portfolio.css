@@ -1,0 +1,461 @@
+/* font-family: 'Fira Mono', monospace; */
+* {
+    box-sizing: border-box;
+}
+
+.icon {
+    position: fixed;
+    top: 30px;
+    left: 20px;
+}
+
+.logo1 {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background-color: rgb(188, 108, 37);
+    border-top-right-radius: 30%;
+    animation: slide 5s ease-in-out 1s infinite alternate;
+
+}
+
+.home {
+    display: flex;
+}
+
+.homeleft {
+    padding: 200px 0px 200px 0px;
+    width: 65%;
+    background-color: rgb(40, 54, 24);
+}
+
+.homeleft p {
+    font-family: 'Fira Mono', monospace;
+    color: rgb(254, 250, 224);
+    font-size: 16px;
+    margin-left: 10%;
+}
+
+#namep {
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+#desp {
+    font-size: 30px;
+    margin-top: 0%;
+}
+
+.homeright {
+    padding: 300px 0px 300px 0px;
+    width: 35%;
+    background-color: rgb(221, 161, 94);
+    position: relative;
+
+}
+
+.homemid {
+    left: 0;
+    top: 25%;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+}
+
+.container {
+    width: 50%;
+    height: 90%;
+    position: relative;
+    margin: 20px;
+    left: -25%;
+}
+
+.box {
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border: 1px solid black;
+}
+
+.overlay {
+    z-index: 9;
+    margin: -20px;
+    background: url('./images/pp.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    display: inline-block;
+}
+.overlay:after {
+    content: "";
+    position: absolute;
+      top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+  
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.13) 77%,
+      rgba(255, 255, 255, 0.5) 92%,
+      rgba(255, 255, 255, 0.0) 100%
+    );
+  }
+  
+  /* Hover state - trigger effect */
+  .overlay:hover:after {
+    opacity: 1;
+    left: 130%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+  
+  /* Active state */
+  .overlay:active:after {
+    opacity: 0;
+  }
+.aboutme {
+    display: flex;
+    background-color: rgb(254, 250, 224);
+    padding-bottom: 80px;
+    padding-left: 100px;
+    font-family: 'Fira Mono', monospace;
+    color: rgb(40, 54, 24);
+}
+
+.aboutleft {
+    padding-top: 100px;
+    width: 60%;
+    text-align: justify;
+    padding-right: 100px;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+#contactbtn {
+    font-family: 'Fira Mono', monospace;
+    color: rgb(254, 250, 224);
+    background-color: rgb(96, 108, 56);
+    border-radius: 0px;
+    border: 1px solid rgb(96, 108, 56);
+}
+
+#showbtn {
+    font-family: 'Fira Mono', monospace;
+    color: rgb(254, 250, 224);
+    background-color: rgb(96, 108, 56);
+    border-radius: 0px;
+    font-size: 13px;
+    border: 1px solid rgb(96, 108, 56);
+}
+
+#contactbtn:hover {
+    background-color: rgb(254, 250, 224);
+    color: rgb(40, 54, 24);
+    border: 1px solid rgb(40, 54, 24);
+    font-weight: bold;
+}
+
+.aboutright {
+    padding-top: 100px;
+    width: 40%;
+}
+
+.projects {
+    background-color: rgb(96, 108, 56);
+    font-family: 'Fira Mono', monospace;
+    padding: 100px;
+    color: rgb(254, 250, 224);
+}
+
+.card {
+    margin-top: 50px !important;
+    border-radius: 0px !important;
+    border: none !important;
+    border-top: 1px solid rgb(254, 250, 224) !important;
+    background-color: rgb(96, 108, 56) !important;
+    color: rgb(254, 250, 224) !important;
+    transition: 0.5s;
+}
+
+.contact {
+    background-color: rgb(254, 250, 224);
+    font-family: 'Fira Mono', monospace;
+    color: rgb(40, 54, 24);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px;
+}
+
+.contactleft {
+    width: 60%;
+    padding: 20px;
+}
+
+.contactright {
+    width: 25%;
+    padding-top: 110px;
+    background-color: rgb(96, 108, 56);
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    background-color: rgb(188, 108, 37);
+    border-top-right-radius: 30%;
+}
+
+.logo:hover {
+    animation: slide 2s linear;
+}
+
+@keyframes slide {
+    0% {
+        border-top-right-radius: 30%;
+    }
+
+    25% {
+        border-bottom-right-radius: 30%;
+    }
+
+    50% {
+        border-bottom-left-radius: 30%;
+    }
+
+    75% {
+        border-top-left-radius: 30%;
+    }
+
+    100% {
+        border-top-right-radius: 30%;
+    }
+}
+
+.smbtn {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
+    margin-top: 50%;
+    padding-bottom: 3px;
+
+}
+
+.line {
+    color: rgb(254, 250, 224)
+}
+
+.mailid {
+    font-size: 10px;
+    text-align: center;
+    color: rgb(254, 250, 224)
+
+}
+
+.linkbtn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+}
+
+#linkedin {
+    background: url('./images/linkedin.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#github {
+    background: url('./images/github.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#twitter {
+    background: url('./images/twitter.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#instagram {
+    background: url('./images/instagram.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#codepoint {
+    background: url('./images/codepen.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#linkedin:hover {
+    background: url('./images/linkedinb.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#github:hover {
+    background: url('./images/githubb.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#twitter:hover {
+    background: url('./images/twitterb.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#instagram:hover {
+    background: url('./images/instagramb.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#codepoint:hover {
+    background: url('./images/codepenb.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
+
+input {
+    border-radius: 0 !important;
+    background-color: rgb(96, 108, 56) !important;
+    border: 1px solid rgb(96, 108, 56) !important;
+    color: rgb(254, 250, 224) !important;
+}
+
+textarea {
+    border-radius: 0 !important;
+    background-color: rgb(96, 108, 56) !important;
+    border: 1px solid rgb(96, 108, 56) !important;
+    color: rgb(254, 250, 224) !important;
+}
+
+input::placeholder {
+    font-size: 12px !important;
+    color: rgb(254, 250, 224) !important;
+}
+
+textarea::placeholder {
+    font-size: 12px !important;
+    color: rgb(254, 250, 224) !important;
+}
+
+input:focus {
+    box-shadow: none !important;
+}
+
+textarea:focus {
+    box-shadow: none !important;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        left: 10%;
+    }
+    
+    .contact {
+        display: block;
+        padding: 0px;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    .contactleft {
+        width: 100%;
+
+    }
+
+    .contactright {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 10%;
+        padding-top: 50px;
+
+    }
+    .smbtn {
+        margin-top: 10%;
+    }
+    .mailid{
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .home {
+        display: block;
+    }
+
+    .homeleft {
+        width: 100%;
+    }
+
+    .homeright {
+        width: 100%;
+    }
+
+    .homemid {
+        width: 50%;
+    }
+
+    .container {
+        left: 40%;
+    }
+
+    .aboutme {
+        display: block;
+    }
+
+    .aboutleft {
+        width: 100%;
+    }
+
+    .aboutright {
+        width: 100%;
+        padding-right: 50px;
+    }
+
+    .contact {
+        display: block;
+        padding: 0px;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    .contactleft {
+        width: 100%;
+
+    }
+
+    .contactright {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 10%;
+        padding-top: 50px;
+
+    }
+    .smbtn {
+        margin-top: 10%;
+    }
+    .mailid{
+        padding-bottom: 20px;
+    }
+}
