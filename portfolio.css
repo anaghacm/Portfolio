@@ -3,10 +3,44 @@
     box-sizing: border-box;
 }
 
+#navbar {
+    background-color: rgb(254, 250, 224);
+    position: fixed;
+    top: -40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: top 0.3s;
+    z-index: 100;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: rgb(40, 54, 24);
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Fira Mono', monospace;
+}
+
+#navbar a:hover {
+    color: rgb(188, 108, 37);
+}
+
+#navbar:hover {
+    transform: translateY(40px);
+}
+
 .icon {
     position: fixed;
     top: 30px;
     left: 20px;
+    z-index: 101;
 }
 
 .logo1 {
@@ -91,39 +125,40 @@
     overflow: hidden;
     display: inline-block;
 }
+
 .overlay:after {
     content: "";
     position: absolute;
-      top: -50%;
+    top: -50%;
     left: -60%;
     width: 20%;
     height: 200%;
     opacity: 0;
     transform: rotate(30deg);
-  
+
     background: rgba(255, 255, 255, 0.13);
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.13) 0%,
-      rgba(255, 255, 255, 0.13) 77%,
-      rgba(255, 255, 255, 0.5) 92%,
-      rgba(255, 255, 255, 0.0) 100%
-    );
-  }
-  
-  /* Hover state - trigger effect */
-  .overlay:hover:after {
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0.13) 0%,
+            rgba(255, 255, 255, 0.13) 77%,
+            rgba(255, 255, 255, 0.5) 92%,
+            rgba(255, 255, 255, 0.0) 100%);
+}
+
+/* Hover state - trigger effect */
+.overlay:hover:after {
     opacity: 1;
     left: 130%;
     transition-property: left, top, opacity;
     transition-duration: 0.7s, 0.7s, 0.15s;
     transition-timing-function: ease;
-  }
-  
-  /* Active state */
-  .overlay:active:after {
+
+}
+
+/* Active state */
+.overlay:active:after {
     opacity: 0;
-  }
+}
+
 .aboutme {
     display: flex;
     background-color: rgb(254, 250, 224);
@@ -180,12 +215,15 @@
 
 .card {
     margin-top: 50px !important;
+    margin-bottom: 30px !important;
+    padding-top: 10px !important;
     border-radius: 0px !important;
     border: none !important;
     border-top: 1px solid rgb(254, 250, 224) !important;
     background-color: rgb(96, 108, 56) !important;
     color: rgb(254, 250, 224) !important;
     transition: 0.5s;
+    /* position: relative; */
 }
 
 .contact {
@@ -201,6 +239,162 @@
     width: 60%;
     padding: 20px;
 }
+
+
+/*Contact Me Button on about me*/
+#aboutbtn {
+    background-color:rgb(96, 108, 56);
+    /* position: relative; */
+    color: rgb(254, 250, 224);
+    padding: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-family: 'Fira Mono', monospace;
+    border-radius: 0px;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+#aboutbtn {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#aboutbtn:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    /* top: 14px; */
+    right: -20px;
+    transition: 0.5s;
+}
+
+#aboutbtn:hover {
+    padding-right: 32px;
+    padding-left: 16px;
+}
+
+#aboutbtn:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+
+
+
+/*Case study Button*/
+.center {
+    position: absolute;
+    /* top: 50%; */
+    left: 27%;
+    transform: translate(-50%, -50%);
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+a span {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: .5s;
+    position: relative;
+}
+
+a span:nth-child(1) {
+    color: rgb(40, 54, 24);
+    background: rgb(254, 250, 224);
+}
+
+a span:nth-child(2) {
+    color: rgb(40, 54, 24);
+    background: rgb(188, 108, 37);
+}
+
+a span:nth-child(1):before {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(188, 108, 37);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 0.5S;
+    transform-origin: top;
+    transform: rotateX(90deg) translateY(-50%);
+}
+
+a:hover span:nth-child(1):before {
+    transform: rotateX(0deg) translateY(0%);
+}
+
+a span:nth-child(2):before {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(254, 250, 224);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 0.5S;
+    transform-origin: bottom;
+    transform: rotateX(90deg) translateY(50%);
+}
+
+a:hover span:nth-child(2):before {
+    transform: rotateX(0deg) translateY(0%);
+}
+
+a span:nth-child(1):after {
+    content: attr(data-attr);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(254, 250, 224);
+    transform-origin: bottom;
+    transform: rotateX(0deg) translateY(0%);
+    transition: 0.5s;
+}
+
+a:hover span:nth-child(1):after {
+    transform: rotateX(90deg) translateY(50%);
+}
+
+a span:nth-child(2):after {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(188, 108, 37);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 0.5S;
+    transform-origin: top;
+    transform: rotateX(0deg) translateY(0%);
+}
+
+a:hover span:nth-child(2):after {
+    transform: rotateX(90deg) translateY(-50%);
+}
+
+
+
 
 .contactright {
     width: 25%;
@@ -260,7 +454,6 @@
     font-size: 10px;
     text-align: center;
     color: rgb(254, 250, 224)
-
 }
 
 .linkbtn {
@@ -366,12 +559,11 @@ textarea:focus {
     box-shadow: none !important;
 }
 
-
 @media only screen and (max-width: 1000px) {
     .container {
         left: 10%;
     }
-    
+
     .contact {
         display: block;
         padding: 0px;
@@ -391,10 +583,12 @@ textarea:focus {
         padding-top: 50px;
 
     }
+
     .smbtn {
         margin-top: 10%;
     }
-    .mailid{
+
+    .mailid {
         padding-bottom: 20px;
     }
 }
@@ -452,10 +646,12 @@ textarea:focus {
         padding-top: 50px;
 
     }
+
     .smbtn {
         margin-top: 10%;
     }
-    .mailid{
+
+    .mailid {
         padding-bottom: 20px;
     }
 }

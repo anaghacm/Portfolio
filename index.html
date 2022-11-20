@@ -20,17 +20,25 @@
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
 
-  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-<div class="icon">
-      <a class="navbar-brand" href="#homediv">
-        <div class="logo1">
-          <img class="w-100 h-100" src="./images/type-a.png" alt="">
-        </div>
-      </a>
-    </div>
+
+  <div id="navbar">
+    <a href="#homediv"><i class="fa fa-home"></i> HOME</a>
+    <a href="#aboutdiv"><i class="fa fa-user"></i> ABOUT ME</a>
+    <a href="#projectsdiv"><i class="fa fa-tasks"></i> PROJECTS</a>
+    <a href="#contactdiv"><i class="fa fa-address-card"></i> CONTACT</a>
+  </div>
+
+  <div class="icon">
+    <a class="navbar-brand" href="#homediv">
+      <div class="logo1">
+        <img class="w-100 h-100" src="./images/type-a.png" alt="">
+      </div>
+    </a>
+  </div>
 
   <div id="homediv" class="home">
     <div class="homeleft">
@@ -48,7 +56,7 @@
     </div>
   </div>
 
-  <div class="aboutme">
+  <div id="aboutdiv" class="aboutme">
     <div class="aboutleft">
       <h3 class="pb-4">Get to know me!</h3>
       <p>Hello! My name is <b> Anagha</b> and I enjoy creating things that live on the internet. I'm a Full stack Web
@@ -59,7 +67,7 @@
         opportunity that
         matches my skills and experience then don't hesitate to contact me.</p>
 
-      <button class="btn px-4 py-2" id="contactbtn">Contact Me</button>
+      <button class="btn" onclick="window.location.href='#contactdiv'" id="aboutbtn">Contact Me</button>
     </div>
     <div class="aboutright">
       <h3 class="pb-4">My Skills</h3>
@@ -80,67 +88,132 @@
     </div>
   </div>
 
-  <div class="projects">
-    <h3 class="pb-5">Some Things I’ve Built</h3>
+  <div id="projectsdiv" class="projects">
+    <h3 class="pb-5">Some Things I've Built</h3>
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col">
         <div class="card h-100 mx-4">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
+            <h5 class="card-title fw-bold">Travel Blog</h5>
+            <h6 class="pb-4">(To live is to travel)</h6>
+            <p class="card-text pb-5">It is a web template that I created targeting
+              the people who explore the world, and wish to share their experiences and advices.</p>
+            <div class="center">
+              <a href="#"><span data-attr="Case">Case</span><span data-attr="Study">Study</span></a>
+            </div>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card h-100 mx-4">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a short card.</p>
+            <h5 class="card-title fw-bold">Cafe Website Clone</h5>
+            <h6 class="pb-4">(GH Cafe)</h6>
+            <p class="card-text pb-5">I re-created the frontend of GH Cafe's official web app because I got
+              attracted to their beautiful UI. It was a great experience for me to build the entire frontend.</p>
+            <div class="center">
+              <a href="#"><span data-attr="Case">Case</span><span data-attr="Study">Study</span></a>
+            </div>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card h-100 mx-4">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-              content.</p>
+            <h5 class="card-title fw-bold">Instaura</h5>
+            <h6 class="pb-4">(Web application using API)</h6>
+            <p class="card-text pb-5">"Instaura" is a web application which helps to display and filter informations
+              related to high quality make-up products. It uses the public API information.</p>
+            <div class="center">
+              <a href="#"><span data-attr="Case">Case</span><span data-attr="Study">Study</span></a>
+            </div>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card h-100 mx-4">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
+            <h5 class="card-title fw-bold">To Do List</h5>
+            <h6 class="pb-4">(List out the tasks)</h6>
+            <p class="card-text pb-5">"To do List" is my first mini project in Angular which listout the tasks taken
+              from 'https://jsonplaceholder.typicode.com/'.</p>
+            <div class="center">
+              <a href="#"><span data-attr="Case">Case</span><span data-attr="Study">Study</span></a>
+            </div>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card h-100 mx-4">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-              content.</p>
+            <h5 class="card-title fw-bold">Smart Court</h5>
+            <h6 class="pb-4">(Graduation Level Mini Project)</h6>
+            <p class="card-text pb-5">"Smart Court" is a web application which helps to digitalize all the court related
+              procedures such as selection and communication with available advocates.</p>
+            <div class="center">
+              <a href="#"><span data-attr="Case">Case</span><span data-attr="Study">Study</span></a>
+            </div>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card h-100 mx-4">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
+            <h5 class="card-title fw-bold">Network Monitoring System</h5>
+            <h6 class="pb-4">(Graduation Level Main Project)</h6>
+            <p class="card-text pb-5">It is a desktop application which helps to monitor the activities of nodes in a
+              local area network.</p>
+            <div class="center">
+              <a href="#"><span data-attr="Case">Case</span><span data-attr="Study">Study</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 mx-4">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Detaining and avoiding virus propogation</h5>
+            <h6 class="pb-4">(Post Graduation Main Project)</h6>
+            <p class="card-text pb-5">It is a simulation of mobile network in which the system can detain and avoid
+              virus propogation by human behaviour.</p>
+            <div class="center">
+              <a href="#"><span data-attr="Case">Case</span><span data-attr="Study">Study</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-4">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Smart Court</h5>
+            <h6 class="pb-4">(Graduation Level Mini Project)</h6>
+            <p class="card-text pb-5">"Smart Court" is a web application which helps to digitalize all the court related
+              procedures.</p>
+            <div class="center">
+              <a href="#"><span data-attr="Case">Case</span><span data-attr="Study">Study</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 mx-4">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Network Monitoring System</h5>
+            <h6 class="pb-4">(Graduation Level Main Project)</h6>
+            <p class="card-text pb-5">It is a desktop application which helps to monitor the activities of nodes in a
+              local area network.</p>
+            <div class="center">
+              <a href="#"><span data-attr="Case">Case</span><span data-attr="Study">Study</span></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="contact">
+  <div id="contactdiv" class="contact">
     <div class="contactleft">
       <h3 class="pb-3" style="text-align: center;">Get in Touch</h3>
       <p class="pb-4" style="text-align: center; font-size: 16px;">Got a question or proposal, or just want to say
@@ -159,24 +232,29 @@
           <textarea class="form-control" placeholder="Leave your message here" id="message"></textarea>
         </div>
         <div class="col-12 text-center">
-          <button type="button" id="contactbtn" class="btn py-1 px-4">Send<i class="fa-solid fa-envelope"></i></button>
+          <button type="button" id="contactbtn" class="btn mt-3 py-2 px-4">Send <i class="fa fa-envelope"></i></button>
         </div>
       </form>
     </div>
     <div class="contactright">
       <a href="#homediv">
-      <div class="logo">
-        <img class="w-100 h-100" src="./images/type-a.png" alt="">
-      </div></a>
+        <div class="logo">
+          <img class="w-100 h-100" src="./images/type-a.png" alt="">
+        </div>
+      </a>
       <div class="smbtn">
-        <button class="linkbtn" id="linkedin"></button>
-        <button class="linkbtn" id="github"></button>
+        <button onclick="window.location.href='https://www.linkedin.com/in/anagha-cherumadathil/'" class="linkbtn"
+          id="linkedin"></button>
+        <button onclick="window.location.href='https://github.com/anaghacm'" class="linkbtn" id="github"></button>
         <button class="linkbtn" id="twitter"></button>
-        <button class="linkbtn" id="instagram"></button>
+        <button onclick="window.location.href='https://www.instagram.com/anagharsnair/'" class="linkbtn"
+          id="instagram"></button>
         <button class="linkbtn" id="codepoint"></button>
 
       </div>
-      <div class="line"><hr></div>
+      <div class="line">
+        <hr>
+      </div>
       <div class="mailid">anaghaprajeesh2011@gmail.com</div>
     </div>
   </div>
