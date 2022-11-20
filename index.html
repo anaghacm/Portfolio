@@ -218,23 +218,53 @@
       <h3 class="pb-3" style="text-align: center;">Get in Touch</h3>
       <p class="pb-4" style="text-align: center; font-size: 16px;">Got a question or proposal, or just want to say
         hello? <br> Go ahead.</p>
-      <form class="row g-3 px-5">
+      <div id="formdiv">
+        <form class="row">
+          <div class="col-md-6">
+            <input type="text" required="required">
+            <label>Your Name</label>
+            <div class="cover col-md-6"></div>
+          </div>
+          <div class="col-md-6">
+            <input type="email" required="required">
+            <label>Email Address</label>
+            <div class="cover col-md-6"></div>
+          </div>
+
+          <div class="col-12">
+            <input type="text" required="required">
+            <label>Your Message</label>
+            <div class="cover"></div>
+          </div>
+
+          <div class="col-12 text-center">
+            <button type="button" id="contactbtn" class="btn mt-3 py-2 px-4">Send <i class="fa fa-envelope"></i></button>
+          </div>
+        </form>
+      </div>
+      <!-- <form class="row g-3 px-5">
         <div class="col-md-6">
+          
+          <input type="text" class="form-control" id="inputname">
           <label for="inputname" class="form-label">Your Name</label>
-          <input type="text" class="form-control" id="inputname" placeholder="Enter your name">
+          <div class="cover"></div>
         </div>
         <div class="col-md-6">
+          
+          <input type="email" class="form-control" id="inputemail">
           <label for="inputemail" class="form-label">Your Email</label>
-          <input type="email" class="form-control" id="inputemail" placeholder="Enter your email address">
+          <div class="cover"></div>
         </div>
         <div class="col-12">
+          
+          <textarea class="form-control" id="message"></textarea>
           <label for="message" class="form-label">Your Message</label>
-          <textarea class="form-control" placeholder="Leave your message here" id="message"></textarea>
+          <div class="cover"></div>
         </div>
         <div class="col-12 text-center">
           <button type="button" id="contactbtn" class="btn mt-3 py-2 px-4">Send <i class="fa fa-envelope"></i></button>
         </div>
-      </form>
+      </form> -->
     </div>
     <div class="contactright">
       <a href="#homediv">

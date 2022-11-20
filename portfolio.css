@@ -243,7 +243,7 @@
 
 /*Contact Me Button on about me*/
 #aboutbtn {
-    background-color:rgb(96, 108, 56);
+    background-color: rgb(96, 108, 56);
     /* position: relative; */
     color: rgb(254, 250, 224);
     padding: 10px;
@@ -527,6 +527,69 @@ a:hover span:nth-child(2):after {
     transform: translateY(-20px);
 }
 
+form {
+    max-width: 34rem;
+    width: 100%;
+}
+
+#formdiv {
+    display: flex;
+    justify-content: center;
+}
+
+form>div {
+    position: relative;
+
+}
+
+form label {
+    position: absolute;
+    opacity: 0.6;
+    font-size: 0.75rem;
+    left: 1rem;
+    pointer-events: none;
+    color: rgb(254, 250, 224);
+    transition: all .22s;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5rem;
+    background: rgb(96, 108, 56);
+    margin: 1.5rem 0;
+    border: none;
+    color: rgb(254, 250, 224);
+    font-size: 1.125rem;
+}
+
+form input:focus {
+    background: rgb(96, 108, 56);
+    outline: 0;
+}
+
+form input:focus+label,
+form input:hover+label,
+form input:valid+label {
+    top: 0;
+    font-size: 1rem;
+    transform: translateY(0);
+    color: rgb(40, 54, 24);
+    left: 0;
+    opacity: 1;
+}
+
+form .cover {
+    width: 100%;
+    position: absolute;
+    background: transparent;
+    height: 4px;
+    top: 1.25rem;
+}
+
+/* 
 input {
     border-radius: 0 !important;
     background-color: rgb(96, 108, 56) !important;
@@ -557,7 +620,7 @@ input:focus {
 
 textarea:focus {
     box-shadow: none !important;
-}
+} */
 
 @media only screen and (max-width: 1000px) {
     .container {
