@@ -1,0 +1,183 @@
+/* font-family: 'Fira Mono', monospace; */
+* {
+    box-sizing: border-box;
+    font-family: 'Fira Mono', monospace;
+}
+
+body {
+    background-color: rgb(40, 54, 24) !important;
+}
+
+.namediv {
+    width: 80%;
+    color: rgb(254, 250, 224);
+    padding: 100px;
+    padding-top: 200px;
+    margin: auto;
+    text-align: center;
+}
+
+.namediv h1 {
+    font-size: 60px;
+}
+
+.namediv p {
+    font-size: 24px;
+}
+
+#linkbtn {
+    background-color: rgb(188, 108, 37);
+    color: rgb(40, 54, 24);
+    border-radius: 0;
+    padding: 10px;
+    margin-top: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    transition: all 0.5s;
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+}
+
+#linkbtn:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    /* top: 14px; */
+    right: -24px;
+    transition: 0.5s;
+}
+
+#linkbtn:hover {
+    padding-right: 32px;
+    padding-left: 16px;
+}
+
+#linkbtn:hover:after {
+    opacity: 1;
+    right: 12px;
+}
+
+.imgdiv {
+    width: 50%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+#carouselExampleInterval {
+    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+}
+
+.videodiv {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+video {
+    /* box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px; */
+    border-radius: 10px;
+}
+
+.toolsdiv {
+    width: 80%;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 40px;
+    color: rgb(254, 250, 224);
+    text-align: center;
+}
+
+.toolsdiv label {
+    background-color: rgb(24, 36, 12);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    width: 150px;
+    height: 100px;
+    transition: 0.5s;
+}
+
+label:hover{
+    transform: translateY(-15px);
+}
+
+.toolsdiv i {
+    /* color: rgb(254, 250, 224); */
+    font-size: 50px;
+    padding-top: 15%;
+}
+
+.footerdiv {
+    width: 40%;
+    margin: auto;
+    padding: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    background-color: rgb(188, 108, 37);
+    border-top-right-radius: 30%;
+}
+
+.logo:hover {
+    animation: slide 2s linear;
+}
+
+@keyframes slide {
+    0% {
+        border-top-right-radius: 30%;
+    }
+
+    25% {
+        border-bottom-right-radius: 30%;
+    }
+
+    50% {
+        border-bottom-left-radius: 30%;
+    }
+
+    75% {
+        border-top-left-radius: 30%;
+    }
+
+    100% {
+        border-top-right-radius: 30%;
+    }
+}
+
+#homebtn {
+    background-color: rgb(188, 108, 37);
+    color: rgb(40, 54, 24);
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+}
+#homebtn:hover{
+    background-color: rgb(254, 250, 224);
+}
+@media only screen and (max-width: 1000px) {
+    .namediv {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 100px;
+    }
+
+    .imgdiv {
+        width: 90%;
+    }
+    .videodiv{
+        width: 60%;
+    }
+    .toolsdiv{
+        width: 100%;
+       
+    }
+    .footerdiv{
+        width: 80%;
+    }
+   
+}
