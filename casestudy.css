@@ -97,7 +97,7 @@ video {
     transition: 0.5s;
 }
 
-label:hover{
+label:hover {
     transform: translateY(-15px);
 }
 
@@ -150,15 +150,26 @@ label:hover{
 }
 
 #homebtn {
-    background-color: rgb(188, 108, 37);
-    color: rgb(40, 54, 24);
-    border: none;
+    /* background-color: rgb(188, 108, 37); */
+    color: rgb(24, 36, 12);
+    border: 1px solid rgb(254, 250, 224);
     border-radius: 0;
+    /* box-shadow: 4px 4px 8px black; */
+    background: linear-gradient(to left, rgba(254, 250, 224,0.1) 50%,rgb(254, 250, 224) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
     font-weight: bold;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
+
 #homebtn:hover{
-    background-color: rgb(254, 250, 224);
+    background-position: left;
 }
+
+
 @media only screen and (max-width: 1000px) {
     .namediv {
         padding-left: 0px;
@@ -169,15 +180,18 @@ label:hover{
     .imgdiv {
         width: 90%;
     }
-    .videodiv{
+
+    .videodiv {
         width: 60%;
     }
-    .toolsdiv{
+
+    .toolsdiv {
         width: 100%;
-       
+
     }
-    .footerdiv{
+
+    .footerdiv {
         width: 80%;
     }
-   
+
 }
