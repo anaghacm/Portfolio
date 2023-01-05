@@ -116,9 +116,11 @@
     border: 1px solid black;
     transition: all 1s;
 }
-.container:hover .box{
+
+.container:hover .box {
     border-radius: 50%;
 }
+
 .overlay {
     z-index: 9;
     margin: -15px;
@@ -130,7 +132,8 @@
     display: inline-block;
     transition: all 1s;
 }
-.container:hover .overlay{
+
+.container:hover .overlay {
     border-radius: 50%;
 }
 
@@ -153,13 +156,7 @@
     line-height: 30px;
 }
 
-#contactbtn {
-    font-family: 'Fira Mono', monospace;
-    color: rgb(254, 250, 224);
-    background-color: rgb(96, 108, 56);
-    border-radius: 0px;
-    border: 1px solid rgb(96, 108, 56);
-}
+
 
 #showbtn {
     font-family: 'Fira Mono', monospace;
@@ -168,13 +165,6 @@
     border-radius: 0px;
     font-size: 13px;
     border: 1px solid rgb(96, 108, 56);
-}
-
-#contactbtn:hover {
-    background-color: rgb(254, 250, 224);
-    color: rgb(40, 54, 24);
-    border: 1px solid rgb(40, 54, 24);
-    font-weight: bold;
 }
 
 .aboutright {
@@ -190,6 +180,7 @@
 }
 
 .card {
+    max-height: 310px;
     margin-top: 50px !important;
     margin-bottom: 30px !important;
     padding-top: 10px !important;
@@ -200,6 +191,11 @@
     color: rgb(254, 250, 224) !important;
     transition: 0.5s;
     /* position: relative; */
+}
+
+.card-footer {
+    background-color: transparent !important;
+    border: none !important;
 }
 
 .contact {
@@ -216,23 +212,34 @@
     padding: 20px;
 }
 
+#sendbtn {
+    font-family: 'Fira Mono', monospace;
+    color: rgb(254, 250, 224);
+    background-color: rgb(96, 108, 56);
+    border-radius: 0px;
+    border: 1px solid rgb(96, 108, 56);
+}
+
+#sendbtn:hover {
+    background-color: rgb(254, 250, 224);
+    color: rgb(40, 54, 24);
+    border: 1px solid rgb(40, 54, 24);
+    font-weight: bold;
+}
 
 /*Contact Me Button on about me*/
 #aboutbtn {
     background-color: rgb(96, 108, 56);
-    /* position: relative; */
     color: rgb(254, 250, 224);
     padding: 10px;
     padding-left: 24px;
     padding-right: 24px;
     font-family: 'Fira Mono', monospace;
     border-radius: 0px;
-    font-weight: bold;
     transition: all 0.5s;
     cursor: pointer;
     display: inline-block;
     position: relative;
-    /* transition: 0.5s; */
 }
 
 #aboutbtn:after {
@@ -257,12 +264,11 @@
 
 
 /*Case study Button*/
-.center {
+/* .center {
     position: absolute;
     left: 27%;
-    /* top: 50%; */
     transform: translate(-50%, -50%);
-}
+} */
 
 a {
     text-decoration: none;
@@ -364,9 +370,6 @@ a span:nth-child(2):after {
 a:hover span:nth-child(2):after {
     transform: rotateX(90deg) translateY(-50%);
 }
-
-
-
 
 .contactright {
     width: 25%;
@@ -627,6 +630,10 @@ form .cover {
     .aboutright {
         width: 100%;
         padding-right: 50px;
+    }
+
+    .projects {
+        padding: 80px;
     }
 
     .contact {
