@@ -62,7 +62,7 @@ body {
 }
 
 .imgdiv {
-    width: 50%;
+    width: 65%;
     margin: auto;
     padding-bottom: 50px;
 }
@@ -76,12 +76,52 @@ body {
     margin: auto;
     text-align: center;
     margin-bottom: 50px;
+    margin-top: 40px;
 }
 
-video {
-    /* box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px; */
-    border-radius: 10px;
+#videobtn {
+    color: rgb(254, 250, 224);
+    font-size: 18px;
+    /* text-decoration: underline;
+    text-underline-offset: 8px; */
+    /* background-color: rgb(188, 108, 37); */
 }
+
+#videobtn:hover .badge {
+    animation: rotbdg 1s ease-in-out;
+}
+
+#videobtn:focus {
+    border: none;
+}
+
+@keyframes rotbdg {
+    0% {
+        rotate: 30deg;
+    }
+
+    20% {
+        rotate: -30deg;
+    }
+
+    40% {
+        rotate: 15deg;
+    }
+    60%{
+        rotate: -15deg;
+    }
+    80% {
+        rotate: 5deg;
+    }
+
+    90% {
+        rotate: -5deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+
 
 .toolsdiv {
     width: 90%;

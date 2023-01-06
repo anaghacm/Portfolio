@@ -117,26 +117,39 @@
     transition: all 1s;
 }
 
-.container:hover .box {
+/* .container:hover .box {
     border-radius: 50%;
-}
+} */
 
 .overlay {
     z-index: 9;
-    margin: -15px;
+    margin: -10px;
     background: url('https://i.postimg.cc/nrXVMNmQ/pp.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     border: none;
     overflow: hidden;
     display: inline-block;
-    transition: all 1s;
 }
 
-.container:hover .overlay {
-    border-radius: 50%;
+.overlay::after {
+    transition: all .6s ease .2s;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 2px solid rgb(254, 250, 224);
+    background: transparent;
+    opacity: 0;
+    transform: scale(0);
 }
 
+.overlay:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
 
 .aboutme {
     display: flex;
